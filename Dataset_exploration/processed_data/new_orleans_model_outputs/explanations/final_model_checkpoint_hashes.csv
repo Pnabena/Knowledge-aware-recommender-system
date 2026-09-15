@@ -1,0 +1,3 @@
+model,checkpoint,sha256
+KGRec-NV,kgrec_nv_final_checkpoint.pt,254b564ec3a1fd601c0a328d66f855985cee161dc4fd2b8ed0d4299bb155b5f1
+KGRec-MM,kgrec_mm_final_checkpoint.pt,6faba05bf03c9fa3363b266a9f5a3d227f58a1f789afcf23262bede0aae2b0fc

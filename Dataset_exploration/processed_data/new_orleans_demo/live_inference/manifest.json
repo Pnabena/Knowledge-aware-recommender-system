@@ -1,0 +1,17 @@
+{
+  "bundle_version": "1.0",
+  "source": "frozen KGRec experiment",
+  "users": 14991,
+  "businesses": 2516,
+  "nv_embedding_dim": 64,
+  "mm_embedding_dim": 64,
+  "ranking": "user-business dot product",
+  "candidate_environment": "final test-style full catalogue",
+  "exclusions": "training positives plus validation positive",
+  "tie_break": "lower business_row first",
+  "models": {
+    "NV": "interaction + graph + text/metadata",
+    "MM": "interaction + graph + text/metadata + masked visual features"
+  },
+  "retraining": false
+}

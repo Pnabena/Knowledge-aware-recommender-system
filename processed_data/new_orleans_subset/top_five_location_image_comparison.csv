@@ -1,0 +1,6 @@
+state_clean,city_clean,business_count,total_reviews,median_reviews,businesses_with_photos,photo_coverage_percentage,total_photos,median_photos_per_business,p95_photos_per_business,businesses_with_captioned_photos,captioned_business_coverage_percentage,captioned_photo_percentage,unique_photo_labels
+PA,Philadelphia,7692,751438,31.0,4038,52.5,25299,1.0,14.0,2904,37.75,50.32,5
+FL,Tampa,4073,334036,30.0,2344,57.55,15642,1.0,17.0,1726,42.38,52.54,5
+IN,Indianapolis,3905,281357,28.0,2090,53.52,11891,1.0,14.0,1425,36.49,48.32,5
+TN,Nashville,3526,367155,34.0,1933,54.82,14093,1.0,19.0,1421,40.3,50.29,5
+LA,New Orleans,3505,547106,41.0,1977,56.41,19456,1.0,25.0,1562,44.56,52.89,5

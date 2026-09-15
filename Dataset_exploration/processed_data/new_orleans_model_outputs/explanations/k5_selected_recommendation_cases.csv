@@ -1,0 +1,6 @@
+case_type,candidate_pool_size,candidate_median_effect,user_row,business_id,name,target_has_visual,nv_rank,mm_rank,rank_improvement,user_training_interaction_count,training_interaction_count,metadata_edge_count,image_count,unique_image_labels,target_visual_score_gain,target_visual_rank_gain,competitive_visual_rank_effect
+A — Visual Top-20 Gain,707,38.0,1483,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,True,56,18,38,5,601,54,5,3,0.7221942,635,11
+B — High-Diversity Visual Gain,666,38.0,3279,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,True,44,6,38,10,216,40,5,4,0.93091065,762,141
+C — Visual Counterexample,2311,-30.0,672,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,True,19,49,-30,3,288,35,5,3,0.7564636,622,-32
+D — Image-less Competitive Penalty,1723,-578.0,7806,oOSMOJptLRbmEDjp0YnEPw,Witches Brew Tours,False,542,759,-217,11,57,10,0,0,0.0,0,-578
+E — Sparse-User Visual Gain,488,39.0,3072,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,True,52,13,39,5,676,44,5,5,0.8575123,713,12

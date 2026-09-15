@@ -1,0 +1,13 @@
+case_type,business_id,business_name,photo_id,photo_filename,label,caption_clean,selection_rank,visual_representativeness
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,VFG5aJDwTB9-MvnonvE1NA,VFG5aJDwTB9-MvnonvE1NA.jpg,inside,Front End,4,0.869333
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,FhIs4Hbgp8UEDgsk5gCXAQ,FhIs4Hbgp8UEDgsk5gCXAQ.jpg,outside,,3,0.8650861
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,yo-SyxxlodOhhQd7LA5kjQ,yo-SyxxlodOhhQd7LA5kjQ.jpg,food,Debris sandwich,2,0.77837807
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Sy4raAjYQcwxiOWOz9erRg,Sy4raAjYQcwxiOWOz9erRg.jpg,inside,,1,0.9026392
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,3spuJBBV3D7HhYyO943cLA,3spuJBBV3D7HhYyO943cLA.jpg,outside,,3,0.89002043
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,cnHX6pBK7AJ7FnNqYEJKnQ,cnHX6pBK7AJ7FnNqYEJKnQ.jpg,food,Poppy Seed Meringue with Lemon Curd and Strawberries,2,0.8363603
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,POPAoL12iPU74un4BxriRQ,POPAoL12iPU74un4BxriRQ.jpg,inside,Interior,1,0.8765069
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,SdJxap4ZR48zLs2LpN98aA,SdJxap4ZR48zLs2LpN98aA.jpg,drink,Emeril's wine,3,0.8759446
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,FgBuM7ybGvN8MVZ0tjVtag,FgBuM7ybGvN8MVZ0tjVtag.jpg,food,Sticky buffalo duck wings,5,0.8055957
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,TyWecQT1sESpgMdp6I6lWg,TyWecQT1sESpgMdp6I6lWg.jpg,inside,,1,0.85415936
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,2lGRsaa3gfNiK6EbzH4yKA,2lGRsaa3gfNiK6EbzH4yKA.jpg,menu,,5,0.83905554
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,I_VO3sNVgA01zhVW5a5bMA,I_VO3sNVgA01zhVW5a5bMA.jpg,drink,Creamy Vanilla Iced Coffee,4,0.8274646

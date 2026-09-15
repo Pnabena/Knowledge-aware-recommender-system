@@ -1,0 +1,12 @@
+dataset,records,users,businesses,purpose,project_use,status
+new_orleans_food_hospitality_businesses,3505,,3505.0,Full domain and location-specific business subset,"Metadata, auditing, cold-start analysis and subset source",Final selected raw subset
+new_orleans_food_hospitality_photos,19456,,1977.0,All photographs linked to selected businesses,"Image and caption embeddings, visual explanations",Final selected raw subset
+new_orleans_food_hospitality_reviews_raw,559117,222493.0,3505.0,Complete review and interaction evidence,"Text modelling, sentiment, filtering and explanations",Final selected raw subset
+new_orleans_all_reviews_5core,256512,23338.0,3025.0,Connected review dataset containing all ratings,"Review embeddings, business representation and evidence",Modelling dataset
+all_review_train,209836,23338.0,,Temporal split containing all rating types,Diagnostic and text experiments only,Not final ranking split
+all_review_validation,23338,23338.0,,Held-out interactions containing mixed sentiment,Diagnostic only,Not final ranking split
+all_review_test,23338,23338.0,,Held-out interactions containing mixed sentiment,Diagnostic only,Not final ranking split
+new_orleans_users_5core,23338,23338.0,,User metadata for all-review-core users,User audit and supplementary features,Supporting dataset
+new_orleans_businesses_5core,3025,,3025.0,Business metadata aligned with all-review core,Business nodes and text representation,Supporting dataset
+new_orleans_photos_5core,19234,,1889.0,Photos aligned with all-review core,Multimodal experiments and image selection,Supporting dataset
+new_orleans_positive_reviews_5core,160524,15428.0,2549.0,Connected positive-preference interactions,"Personalisation, KGRec and ranking evaluation",Primary recommendation dataset

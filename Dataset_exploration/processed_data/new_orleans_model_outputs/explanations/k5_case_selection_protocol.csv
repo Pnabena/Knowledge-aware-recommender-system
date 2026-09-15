@@ -1,0 +1,6 @@
+case_type,eligibility,selection_rule,purpose
+A — Visual Top-20 Gain,Visual-supported target; NV rank > 20; MM rank <= 20,Case closest to median rank improvement within eligible pool,Illustrate a concrete multimodal top-20 gain
+B — High-Diversity Visual Gain,Visual-supported target; >=4 image labels; NV rank > 20; MM rank <= 20,Case closest to median rank improvement within eligible pool,Connect case evidence to RQ3 visual-diversity finding
+C — Visual Counterexample,Visual-supported target; NV rank <=100; MM rank worse than NV,Case closest to median rank change within eligible pool,Show that visual information does not guarantee improved ranking
+D — Image-less Competitive Penalty,Image-less target; rank worsens when competitors retain visual evidence,Case closest to median competitive rank effect,Illustrate competitive missing-modality behaviour
+E — Sparse-User Visual Gain,3–5 training interactions; visual target; NV rank >20; MM rank <=20,Case closest to median rank improvement within eligible pool,Connect case evidence to RQ3 user-history heterogeneity

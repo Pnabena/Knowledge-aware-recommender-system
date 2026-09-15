@@ -1,0 +1,36 @@
+case_type,business_id,business_name,evidence_family,evidence_label,value
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,Alcohol,beer_and_wine
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,BusinessAcceptsCreditCards,true
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,Caters,true
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,GoodForKids,true
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,HasTV,true
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,NoiseLevel,average
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,RestaurantsAttire,casual
+A — Visual Top-20 Gain,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,Attribute,RestaurantsDelivery,true
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,Alcohol,full_bar
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,BYOBCorkage,yes_corkage
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,BikeParking,true
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,BusinessAcceptsCreditCards,true
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,Corkage,true
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,HasTV,true
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,NoiseLevel,average
+B — High-Diversity Visual Gain,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,Attribute,OutdoorSeating,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,Alcohol,full_bar
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,BikeParking,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,BusinessAcceptsCreditCards,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,ByAppointmentOnly,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,GoodForKids,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,HappyHour,true
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,NoiseLevel,average
+C — Visual Counterexample,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,Attribute,RestaurantsAttire,dressy
+D — Image-less Competitive Penalty,oOSMOJptLRbmEDjp0YnEPw,Witches Brew Tours,Attribute,GoodForKids,true
+D — Image-less Competitive Penalty,oOSMOJptLRbmEDjp0YnEPw,Witches Brew Tours,Attribute,RestaurantsPriceRange2,1
+D — Image-less Competitive Penalty,oOSMOJptLRbmEDjp0YnEPw,Witches Brew Tours,Attribute,WiFi,no
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,Alcohol,full_bar
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,BikeParking,true
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,BusinessAcceptsCreditCards,true
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,GoodForKids,true
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,HappyHour,true
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,HasTV,true
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,NoiseLevel,loud
+E — Sparse-User Visual Gain,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,Attribute,OutdoorSeating,true

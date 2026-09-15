@@ -1,0 +1,28 @@
+.location-picker { position: relative; width: 206px; flex-shrink: 0; }
+.location-control { display: flex; align-items: center; gap: 9px; width: 100%; height: 56px; padding: 0 14px; border: 1px solid var(--border); border-radius: var(--radius-control); background: #fff; color: var(--text); transition: border-color 150ms, background 150ms; }
+.location-control:hover, .location-control[aria-expanded="true"] { border-color: #8be1d8; background: #f0fbf9; }
+.location-control span { flex: 1; min-width: 0; text-align: left; font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.location-pin { flex-shrink: 0; color: #138479; }
+.location-chevron { flex-shrink: 0; color: var(--muted); transition: transform 150ms; }
+.location-control[aria-expanded="true"] .location-chevron { transform: rotate(180deg); }
+.location-popover { position: absolute; right: 0; top: calc(100% + 10px); z-index: 50; width: 300px; max-width: calc(100vw - 24px); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-card); background: #fff; box-shadow: 0 12px 40px #22293618, 0 2px 8px #22293608; }
+.location-menu-heading { padding: 17px 18px 13px; font-size: 14px; font-weight: 700; color: var(--text); }
+.location-menu-heading > span { display: block; margin-top: 3px; font-size: 11px; font-weight: 500; color: var(--muted); }
+.location-options { list-style: none; margin: 0; padding: 4px 7px; max-height: min(300px, calc(100dvh - 290px)); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #d4d5db transparent; outline: none; }
+.location-options:focus-visible { box-shadow: inset 0 0 0 2px #8be1d8; border-radius: var(--radius-small); }
+.location-option { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 54px; padding: 9px 11px; margin-bottom: 2px; border-radius: var(--radius-small); color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer; }
+.location-option small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; font-weight: 400; }
+.location-option:hover, .location-option.is-active { background: var(--surface); }
+.location-option[aria-selected="true"] { color: var(--brand-dark); background: #eafaf7; }
+.location-option[aria-selected="true"].is-active { box-shadow: inset 0 0 0 1px #8be1d8; }
+.location-menu-note { border-top: 1px solid var(--border); padding: 12px 18px; margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; background: #f9fafc; }
+@media (min-width: 1750px) { .location-picker { width: 224px; } .location-control { height: 63px; } }
+@media (min-width: 600px) and (max-width: 899px) { .location-picker { width: 184px; } .location-control { gap: 6px; padding: 0 11px; } .location-control span { font-size: 13px; } }
+@media (max-width: 599px) {
+  .location-picker { order: 2; width: auto; max-width: 100%; }
+  .location-control { height: 34px; gap: 6px; padding: 0 10px; border-radius: 10px; background: #f9fafc; }
+  .location-control span { font-size: 12px; }
+  .location-pin { width: 15px; height: 15px; }
+  .location-chevron { width: 13px; height: 13px; }
+  .location-popover { left: 0; right: auto; top: calc(100% + 8px); }
+}

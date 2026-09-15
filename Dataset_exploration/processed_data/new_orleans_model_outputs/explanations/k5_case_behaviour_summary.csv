@@ -1,0 +1,6 @@
+case_type,user_row,user_id,business_id,business_name,nv_rank,mm_rank,rank_improvement,training_history_count,target_category_count,target_categories_supported_by_history,target_category_support_fraction,target_has_visual,selected_image_count,label_diversity,target_visual_score_gain,target_visual_rank_gain,competitive_visual_rank_effect
+A — Visual Top-20 Gain,1483,5Nl6vX1LSbd3K1KBkOVtxQ,iSRTaT9WngzB8JJ2YKJUig,Mother's Restaurant,56,18,38,5,12,6,0.5,True,5,3,0.7221941947937012,635.0,
+B — High-Diversity Visual Gain,3279,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,Herbsaint,44,6,38,10,3,3,1.0,True,5,4,0.9309106469154358,762.0,
+C — Visual Counterexample,672,1j0ef7b89BUBByKc5BNWDg,u7uFQCoHFtBKCtbWUm6yZw,Emeril's ,19,49,-30,3,4,4,1.0,True,5,3,0.7564635872840881,622.0,
+D — Image-less Competitive Penalty,7806,WZUeLyOo2Y_GnlEOLMUjpg,oOSMOJptLRbmEDjp0YnEPw,Witches Brew Tours,542,759,-217,11,7,1,0.14285714285714285,False,0,0,,,-578.0
+E — Sparse-User Visual Gain,3072,CJ8yYeLi1qaBbxc5xezyaA,oBNrLz4EDhiscSlbOl8uAw,Ruby Slipper - New Orleans,52,13,39,5,5,3,0.6,True,5,5,0.8575122952461243,713.0,

@@ -1,0 +1,9 @@
+evidence_family,evidence_label,value
+Attribute,Alcohol,full_bar
+Attribute,BikeParking,true
+Attribute,Caters,true
+Attribute,GoodForKids,true
+Attribute,NoiseLevel,average
+Attribute,RestaurantsAttire,casual
+Attribute,RestaurantsGoodForGroups,true
+Attribute,RestaurantsPriceRange2,2

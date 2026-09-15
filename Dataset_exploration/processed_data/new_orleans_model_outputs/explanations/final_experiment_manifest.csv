@@ -1,0 +1,13 @@
+component,value,status
+Personalisation catalogue,2516,Frozen
+Users,14991,Frozen
+Training interactions,122233,Frozen
+Validation interactions,14991,Frozen
+Test interactions,14991,Frozen
+Metadata KG triples,83989,Frozen
+Unified training KG triples,206222,Frozen
+Businesses with genuine visual features,1729,Frozen
+Image-less businesses,787,Frozen
+Selected personalisation images,6122,Frozen
+Selected explanation cases,5,Frozen
+RQ4 synthesis themes,8,Complete

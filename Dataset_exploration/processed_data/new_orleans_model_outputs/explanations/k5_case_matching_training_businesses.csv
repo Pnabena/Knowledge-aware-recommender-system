@@ -1,0 +1,20 @@
+case_type,user_id,target_business_id,business_id,name,shared_category_count,shared_categories
+A — Visual Top-20 Gain,5Nl6vX1LSbd3K1KBkOVtxQ,iSRTaT9WngzB8JJ2YKJUig,oe-iacnzvyHV8zxaNqCf7A,Coterie Restaurant & Oyster Bar,4,"Breakfast & Brunch, Cajun/Creole, Restaurants, Southern"
+A — Visual Top-20 Gain,5Nl6vX1LSbd3K1KBkOVtxQ,iSRTaT9WngzB8JJ2YKJUig,NHdE_ObFj7OjQBB3jjqBNQ,Lula Restaurant Distillery,4,"Cajun/Creole, Food, Restaurants, Southern"
+A — Visual Top-20 Gain,5Nl6vX1LSbd3K1KBkOVtxQ,iSRTaT9WngzB8JJ2YKJUig,eCikDKFbaeYVNdCD2beX0Q,Dat Dog,3,"American (New), Cajun/Creole, Restaurants"
+A — Visual Top-20 Gain,5Nl6vX1LSbd3K1KBkOVtxQ,iSRTaT9WngzB8JJ2YKJUig,TVDe34aKHkjaEOtCqffwbw,BB King's Blues Club,2,"Cajun/Creole, Restaurants"
+B — High-Diversity Visual Gain,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,_C7QiQQc47AOEv4PE3Kong,Commander's Palace,2,"French, Restaurants"
+B — High-Diversity Visual Gain,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,mhrW9O0O5hXGXGnEYBVoag,Jacques-Imo's Cafe,2,"Restaurants, Seafood"
+B — High-Diversity Visual Gain,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,8KnMSrMuTI2AtHZ2LOI8OQ,Maurepas Foods,2,"Restaurants, Seafood"
+B — High-Diversity Visual Gain,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,JhpRI9m71ybWHkAqRdL0Tg,The Avenue Pub,2,"French, Restaurants"
+B — High-Diversity Visual Gain,D76EFdD5F7XoIIyQmWTQhA,ZTctPm8-lBy0iJ9dFhYhyQ,kdqoDMuvyNedsouc1i33vQ,Araña Taqueria y Cantina,1,Restaurants
+C — Visual Counterexample,1j0ef7b89BUBByKc5BNWDg,u7uFQCoHFtBKCtbWUm6yZw,GBTPC53ZrG1ZBY3DT8Mbcw,Luke,4,"American (New), Cajun/Creole, Restaurants, Seafood"
+C — Visual Counterexample,1j0ef7b89BUBByKc5BNWDg,u7uFQCoHFtBKCtbWUm6yZw,UeYZgcORV2Veo_BZzdiaTg,Napoleon House,1,Restaurants
+C — Visual Counterexample,1j0ef7b89BUBByKc5BNWDg,u7uFQCoHFtBKCtbWUm6yZw,Nu-DLt0yxVO89R0FsSJm2g,Willie Mae's Grocery & Deli,1,Restaurants
+D — Image-less Competitive Penalty,WZUeLyOo2Y_GnlEOLMUjpg,oOSMOJptLRbmEDjp0YnEPw,p8V4zEEYZvZnZh9f8k5KZA,New Orleans Original Daiquiris,1,Nightlife
+D — Image-less Competitive Penalty,WZUeLyOo2Y_GnlEOLMUjpg,oOSMOJptLRbmEDjp0YnEPw,Gfegg1vwKJJo-EfEujQ-nw,Parasol's,1,Nightlife
+D — Image-less Competitive Penalty,WZUeLyOo2Y_GnlEOLMUjpg,oOSMOJptLRbmEDjp0YnEPw,t9LiapsQABwMQeiF1Czl6w,Port Of Call,1,Nightlife
+E — Sparse-User Visual Gain,CJ8yYeLi1qaBbxc5xezyaA,oBNrLz4EDhiscSlbOl8uAw,8ASzjS3ITg5bQSyObsCx5w,Russell's Marina Grill,3,"American (Traditional), Breakfast & Brunch, Restaurants"
+E — Sparse-User Visual Gain,CJ8yYeLi1qaBbxc5xezyaA,oBNrLz4EDhiscSlbOl8uAw,yMlpyzvx5o3tTFI_1esgGQ,Bakery Bar,2,"Breakfast & Brunch, Restaurants"
+E — Sparse-User Visual Gain,CJ8yYeLi1qaBbxc5xezyaA,oBNrLz4EDhiscSlbOl8uAw,yzMxuQYGIqHZCds5J21g2A,City Donuts & Café,1,Restaurants
+E — Sparse-User Visual Gain,CJ8yYeLi1qaBbxc5xezyaA,oBNrLz4EDhiscSlbOl8uAw,LMZUCETroHpXHQzOwSqGEA,Secret Birria,1,Restaurants

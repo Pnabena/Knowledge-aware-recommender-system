@@ -1,0 +1,5 @@
+evidence_type,source,scope,model_relationship
+Business identity,new_orleans_subset/new_orleans_personalisation_businesses.parquet,2516 personalisation businesses,Display/context only
+Structured KG,new_orleans_knowledge_graph/new_orleans_frozen_metadata_kg.parquet,Frozen metadata KG,Direct structured model evidence
+Review text,Frozen positive_train review IDs joined to new_orleans_food_hospitality_reviews_raw.parquet,122233 training interactions only,Same training-review evidence used to construct BGE business text
+Visual evidence,new_orleans_image_pipeline/new_orleans_image_embedding_manifest.parquet,6122 selected photos across 1729 model businesses,Exact photos selected for CLIP business representation

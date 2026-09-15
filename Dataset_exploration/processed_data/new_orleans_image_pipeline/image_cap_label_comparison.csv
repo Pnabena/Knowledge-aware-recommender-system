@@ -1,0 +1,16 @@
+image_cap,label,selected_images,available_images,label_images_retained_percentage
+3,inside,1773,6672,26.57
+3,food,1824,9317,19.58
+3,outside,753,1915,39.32
+3,drink,376,1422,26.44
+3,menu,34,126,26.98
+5,inside,2484,6672,37.23
+5,food,2583,9317,27.72
+5,outside,855,1915,44.65
+5,drink,662,1422,46.55
+5,menu,97,126,76.98
+10,inside,3471,6672,52.02
+10,food,3998,9317,42.91
+10,outside,1164,1915,60.78
+10,drink,999,1422,70.25
+10,menu,116,126,92.06

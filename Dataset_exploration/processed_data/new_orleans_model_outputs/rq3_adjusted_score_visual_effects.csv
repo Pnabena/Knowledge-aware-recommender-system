@@ -1,0 +1,3 @@
+term,coefficient,std_error,p_value,CI_95_lower,CI_95_upper,model,outcome
+z_log_raw_image_count,0.0250586281690068,0.005285209679294355,2.1237829137975646e-06,0.014699807546847375,0.03541744879116623,Image quantity,mean_target_visual_score_gain
+z_eligible_label_diversity_raw,0.03788934672788079,0.0041060225972320485,2.763782618744743e-20,0.02984169031759836,0.045937003138163214,Label diversity,mean_target_visual_score_gain

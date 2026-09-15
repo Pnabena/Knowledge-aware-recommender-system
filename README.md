@@ -23,4 +23,23 @@ Each notebook includes its saved cell outputs and embedded figures. Open an `.ip
 
 Execution requires the local Yelp datasets, intermediate artefacts and model outputs referenced in the notebook cells, plus the Python packages imported by each notebook. Check the path configuration cells for machine-specific paths before running. The notebooks were copied with their existing outputs; they were not re-executed for this commit.
 
-This repository contains the eight main research notebooks. Raw datasets, photo archives, generated model artefacts, duplicate notebook folders and the separate demo application are not included. The local `08_demo_data_export.ipynb` file was empty and is omitted.
+This repository contains the eight main research notebooks, the [Local Table demo](Demo_app/README.md), and both processed-data folders. The local `08_demo_data_export.ipynb` file was empty and is omitted. Duplicate notebook folders and installed dependencies are omitted.
+
+## Demo and processed data
+
+- `Demo_app/`: the Next.js frontend, FastAPI backend, bundled assets and tests, including catalogue search and the exact notebook-case view.
+- `Dataset_exploration/processed_data/`: the research pipeline outputs, embeddings, frozen model bundle, explanations, figures and preparation archives.
+- `processed_data/`: additional processed subset tables and archive from the project root.
+
+The processed data includes large binary files stored with Git LFS. Install Git LFS before cloning, or run `git lfs pull` in an existing checkout:
+
+```sh
+git lfs install
+git clone https://github.com/Pnabena/Knowledge-aware-recommender-system.git
+cd Knowledge-aware-recommender-system
+git lfs pull
+```
+
+Follow [the demo startup instructions](Demo_app/README.md) to install dependencies and run both servers. The prepared Python environment path in that README belongs to the original development machine; create your own environment when running elsewhere.
+
+The original Yelp JPEG library remains a separate dependency at `Dataset_exploration/Image_files/photos/`. Restore it locally to display the selected business photos; missing files appear as unavailable images. The bulk original Yelp datasets and photo archives are not part of this commit.

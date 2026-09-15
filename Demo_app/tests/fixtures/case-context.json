@@ -1,0 +1,631 @@
+{
+  "cases": [
+    {
+      "case_type": "A — Visual Top-20 Gain",
+      "user_row": 1483,
+      "user_id": "5Nl6vX1LSbd3K1KBkOVtxQ",
+      "business_id": "iSRTaT9WngzB8JJ2YKJUig",
+      "business_name": "Mother's Restaurant",
+      "nv_rank": 56,
+      "mm_rank": 18,
+      "rank_improvement": 38,
+      "training_history_count": 5,
+      "target_category_count": 12,
+      "target_categories_supported_by_history": 6,
+      "target_category_support_fraction": 0.5,
+      "target_has_visual": true,
+      "selected_image_count": 5,
+      "label_diversity": 3,
+      "target_visual_score_gain": 0.7221941947937012,
+      "target_visual_rank_gain": 635.0,
+      "competitive_visual_rank_effect": null
+    },
+    {
+      "case_type": "B — High-Diversity Visual Gain",
+      "user_row": 3279,
+      "user_id": "D76EFdD5F7XoIIyQmWTQhA",
+      "business_id": "ZTctPm8-lBy0iJ9dFhYhyQ",
+      "business_name": "Herbsaint",
+      "nv_rank": 44,
+      "mm_rank": 6,
+      "rank_improvement": 38,
+      "training_history_count": 10,
+      "target_category_count": 3,
+      "target_categories_supported_by_history": 3,
+      "target_category_support_fraction": 1.0,
+      "target_has_visual": true,
+      "selected_image_count": 5,
+      "label_diversity": 4,
+      "target_visual_score_gain": 0.9309106469154358,
+      "target_visual_rank_gain": 762.0,
+      "competitive_visual_rank_effect": null
+    },
+    {
+      "case_type": "C — Visual Counterexample",
+      "user_row": 672,
+      "user_id": "1j0ef7b89BUBByKc5BNWDg",
+      "business_id": "u7uFQCoHFtBKCtbWUm6yZw",
+      "business_name": "Emeril's ",
+      "nv_rank": 19,
+      "mm_rank": 49,
+      "rank_improvement": -30,
+      "training_history_count": 3,
+      "target_category_count": 4,
+      "target_categories_supported_by_history": 4,
+      "target_category_support_fraction": 1.0,
+      "target_has_visual": true,
+      "selected_image_count": 5,
+      "label_diversity": 3,
+      "target_visual_score_gain": 0.7564635872840881,
+      "target_visual_rank_gain": 622.0,
+      "competitive_visual_rank_effect": null
+    },
+    {
+      "case_type": "D — Image-less Competitive Penalty",
+      "user_row": 7806,
+      "user_id": "WZUeLyOo2Y_GnlEOLMUjpg",
+      "business_id": "oOSMOJptLRbmEDjp0YnEPw",
+      "business_name": "Witches Brew Tours",
+      "nv_rank": 542,
+      "mm_rank": 759,
+      "rank_improvement": -217,
+      "training_history_count": 11,
+      "target_category_count": 7,
+      "target_categories_supported_by_history": 1,
+      "target_category_support_fraction": 0.1428571428571428,
+      "target_has_visual": false,
+      "selected_image_count": 0,
+      "label_diversity": 0,
+      "target_visual_score_gain": null,
+      "target_visual_rank_gain": null,
+      "competitive_visual_rank_effect": -578.0
+    },
+    {
+      "case_type": "E — Sparse-User Visual Gain",
+      "user_row": 3072,
+      "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+      "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+      "business_name": "Ruby Slipper - New Orleans",
+      "nv_rank": 52,
+      "mm_rank": 13,
+      "rank_improvement": 39,
+      "training_history_count": 5,
+      "target_category_count": 5,
+      "target_categories_supported_by_history": 3,
+      "target_category_support_fraction": 0.6,
+      "target_has_visual": true,
+      "selected_image_count": 5,
+      "label_diversity": 5,
+      "target_visual_score_gain": 0.8575122952461243,
+      "target_visual_rank_gain": 713.0,
+      "competitive_visual_rank_effect": null
+    }
+  ],
+  "ruby": {
+    "source": "dataset",
+    "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+    "business_row": 2048,
+    "name": "Ruby Slipper - New Orleans",
+    "address": "200 Magazine St",
+    "city": "New Orleans",
+    "state": "LA",
+    "postal_code": "70130",
+    "stars": 4.5,
+    "review_count": 5193,
+    "categories": [
+      "Restaurants",
+      "American (Traditional)",
+      "American (New)",
+      "Cafes",
+      "Breakfast & Brunch"
+    ],
+    "is_open": true,
+    "has_visual_feature": true,
+    "attributes": {
+      "NoiseLevel": "'loud'",
+      "Caters": "False",
+      "BikeParking": "True",
+      "BusinessParking": "{'garage': False, 'street': True, 'validated': False, 'lot': False, 'valet': False}",
+      "HasTV": "True",
+      "RestaurantsTakeOut": "True",
+      "RestaurantsReservations": "False",
+      "RestaurantsPriceRange2": "2",
+      "GoodForKids": "True",
+      "WiFi": "u'no'",
+      "RestaurantsAttire": "u'casual'",
+      "Alcohol": "u'full_bar'",
+      "RestaurantsGoodForGroups": "True",
+      "BusinessAcceptsCreditCards": "True",
+      "HappyHour": "True",
+      "Ambience": "{'touristy': False, 'hipster': False, 'romantic': False, 'divey': False, 'intimate': False, 'trendy': False, 'upscale': False, 'classy': True, 'casual': True}",
+      "GoodForMeal": "{'dessert': False, 'latenight': False, 'lunch': None, 'dinner': False, 'brunch': True, 'breakfast': True}",
+      "ByAppointmentOnly": "False",
+      "RestaurantsDelivery": "True",
+      "DogsAllowed": "False",
+      "BYOB": "False",
+      "OutdoorSeating": "True",
+      "RestaurantsTableService": "True"
+    },
+    "hours": {
+      "Monday": "0:0-0:0",
+      "Tuesday": "7:30-14:0",
+      "Wednesday": "7:30-14:0",
+      "Thursday": "7:30-14:0",
+      "Friday": "7:30-14:0",
+      "Saturday": "7:30-15:0",
+      "Sunday": "7:30-15:0"
+    },
+    "image_url": "/business-image/TyWecQT1sESpgMdp6I6lWg",
+    "photos": [
+      {
+        "photo_id": "TyWecQT1sESpgMdp6I6lWg",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "label": "inside",
+        "selection_rank": 1,
+        "width": 600,
+        "height": 400,
+        "image_url": "/business-image/TyWecQT1sESpgMdp6I6lWg"
+      },
+      {
+        "photo_id": "FcupiNHBqu2lxcLEzMo7Kw",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "label": "food",
+        "selection_rank": 2,
+        "width": 600,
+        "height": 400,
+        "image_url": "/business-image/FcupiNHBqu2lxcLEzMo7Kw"
+      },
+      {
+        "photo_id": "CyK0CORlMI_6rJoSjfy38Q",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "label": "outside",
+        "selection_rank": 3,
+        "width": 533,
+        "height": 400,
+        "image_url": "/business-image/CyK0CORlMI_6rJoSjfy38Q"
+      },
+      {
+        "photo_id": "I_VO3sNVgA01zhVW5a5bMA",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "label": "drink",
+        "selection_rank": 4,
+        "width": 600,
+        "height": 400,
+        "image_url": "/business-image/I_VO3sNVgA01zhVW5a5bMA"
+      },
+      {
+        "photo_id": "2lGRsaa3gfNiK6EbzH4yKA",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "label": "menu",
+        "selection_rank": 5,
+        "width": 533,
+        "height": 400,
+        "image_url": "/business-image/2lGRsaa3gfNiK6EbzH4yKA"
+      }
+    ]
+  },
+  "rubyRanking": {
+    "user_row": 3279,
+    "user_id": "D76EFdD5F7XoIIyQmWTQhA",
+    "business_row": 2048,
+    "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+    "nv_rank": 64,
+    "mm_rank": 20,
+    "nv_score": 0.7673300504684448,
+    "mm_score": 0.7917590141296387,
+    "rank_movement": 44,
+    "has_visual_feature": true,
+    "name": "Ruby Slipper - New Orleans",
+    "address": "200 Magazine St",
+    "city": "New Orleans",
+    "state": "LA",
+    "postal_code": "70130",
+    "stars": 4.5,
+    "review_count": 5193,
+    "categories": [
+      "Restaurants",
+      "American (Traditional)",
+      "American (New)",
+      "Cafes",
+      "Breakfast & Brunch"
+    ],
+    "is_open": true
+  },
+  "rubyDemo": {
+    "source": "frozen-model",
+    "summary": {
+      "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+      "user_id": "D76EFdD5F7XoIIyQmWTQhA",
+      "user_row": 3279,
+      "nv_rank": 64,
+      "mm_rank": 20,
+      "target_category_support_fraction": 0.8,
+      "selected_image_count": 5,
+      "label_diversity": 5,
+      "target_visual_score_gain": null,
+      "target_visual_rank_gain": null,
+      "competitive_visual_rank_effect": null
+    },
+    "category_overlap": [
+      {
+        "category": "Restaurants",
+        "historical_business_count": 8
+      },
+      {
+        "category": "American (Traditional)",
+        "historical_business_count": 2
+      },
+      {
+        "category": "American (New)",
+        "historical_business_count": 2
+      },
+      {
+        "category": "Cafes",
+        "historical_business_count": 0
+      },
+      {
+        "category": "Breakfast & Brunch",
+        "historical_business_count": 1
+      }
+    ],
+    "history": [
+      {
+        "business_id": "_C7QiQQc47AOEv4PE3Kong",
+        "name": "Commander's Palace",
+        "shared_categories": "American (New), American (Traditional), Breakfast & Brunch, Restaurants",
+        "shared_category_count": 4
+      },
+      {
+        "business_id": "8KnMSrMuTI2AtHZ2LOI8OQ",
+        "name": "Maurepas Foods",
+        "shared_categories": "American (New), Restaurants",
+        "shared_category_count": 2
+      },
+      {
+        "business_id": "_Bi9kN_eR75G1eqIl7S3pA",
+        "name": "The Bulldog",
+        "shared_categories": "American (Traditional), Restaurants",
+        "shared_category_count": 2
+      },
+      {
+        "business_id": "kdqoDMuvyNedsouc1i33vQ",
+        "name": "Araña Taqueria y Cantina",
+        "shared_categories": "Restaurants",
+        "shared_category_count": 1
+      },
+      {
+        "business_id": "TMBbCDQG6bENJoQSST0XiA",
+        "name": "Brigtsen's Restaurant",
+        "shared_categories": "Restaurants",
+        "shared_category_count": 1
+      },
+      {
+        "business_id": "mhrW9O0O5hXGXGnEYBVoag",
+        "name": "Jacques-Imo's Cafe",
+        "shared_categories": "Restaurants",
+        "shared_category_count": 1
+      },
+      {
+        "business_id": "Zi-F-YvyVOK0k5QD7lrLOg",
+        "name": "Muriel's Jackson Square",
+        "shared_categories": "Restaurants",
+        "shared_category_count": 1
+      },
+      {
+        "business_id": "JhpRI9m71ybWHkAqRdL0Tg",
+        "name": "The Avenue Pub",
+        "shared_categories": "Restaurants",
+        "shared_category_count": 1
+      },
+      {
+        "business_id": "AU-B663F3MPO7W-goWwwXA",
+        "name": "B Mac's",
+        "shared_categories": "",
+        "shared_category_count": 0
+      },
+      {
+        "business_id": "pKykk7lnD6Tf9wSzJYRyJA",
+        "name": "Starbucks",
+        "shared_categories": "",
+        "shared_category_count": 0
+      }
+    ],
+    "text": [
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "review_id": "upLkUjDxeLDliqnr4SLofA",
+        "date": "2020-01-03T15:00:58",
+        "stars": 4,
+        "text_representativeness": 0.940481424331665,
+        "text_excerpt": "This was our first time in NOLA and per some recommendations from back home, we decided to get brunch at Ruby Slipper. It was a great first meal! *** Tip: Put yourself on Yelp wait list as it gets pretty packed *** I got the Grilled fish St. Peter and my girlfriend got the Peacemaker (chose 2 different egg benedicts). My meal was delicious and definitely one of my favorites during our trip. The fish was cooked perfectly and seasoned just right. The egg benedicts were pretty good as well. Service was awesome even though they were super busy."
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "review_id": "nuJDIBxDOxJrGxWkCFOLQw",
+        "date": "2019-04-30T18:56:21",
+        "stars": 4,
+        "text_representativeness": 0.9381895065307617,
+        "text_excerpt": "Came here for breakfast on Monday morning. We reserved a table through yelp before we got there so we didn't have to wait long. We were seated outside on a picnic table. It was really nice out so it was nice to sit outside. The table was super sticky though which was a little uncomfortable at times. We got the banana's foster french toast to share for the table (we had 3 people total). It was really yummy! The portion was huge, but it was so good! I loved the bananas and all the toppings. I got the shrimp & grits as my entree. It was soo good. The shrimp was cooked perfectly and I loved the way it was seasoned with the grits. It came with a giant biscuit on the side. The biscuit was soo g..."
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "review_id": "QX63ISf3xtgm4iQZiVg5aw",
+        "date": "2017-11-15T00:00:00",
+        "stars": 4,
+        "text_representativeness": 0.9377110004425049,
+        "text_excerpt": "Came here early to beat the rush at about 8 am and we were promptly seated at the bar. Ordered the mimosas which were large and strong. My friend and I shared two entrees. Definently would recommend the Cochon! I am not a big eggs Benedict fan but this was amazing. It comes on a flaky biscuit instead of English muffin and had pulled pork on top and the perfect amount of hollandaise sauce. We also ordered bananas foster French toast which comes in a ginormous serving. This will be sure to satisfy your sweet cravings. The bread was buttery and rich brioche smothered in syrup. Service was friendly and fast and the people we met at the bar were friendly as well. Definently worth a visit if yo..."
+      }
+    ],
+    "visual": [
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "photo_id": "TyWecQT1sESpgMdp6I6lWg",
+        "label": "inside",
+        "image_url": "/business-image/TyWecQT1sESpgMdp6I6lWg",
+        "visual_representativeness": 0.8541593551635742
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "photo_id": "2lGRsaa3gfNiK6EbzH4yKA",
+        "label": "menu",
+        "image_url": "/business-image/2lGRsaa3gfNiK6EbzH4yKA",
+        "visual_representativeness": 0.8390555381774902
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "photo_id": "I_VO3sNVgA01zhVW5a5bMA",
+        "label": "drink",
+        "image_url": "/business-image/I_VO3sNVgA01zhVW5a5bMA",
+        "visual_representativeness": 0.8274645805358887
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "photo_id": "FcupiNHBqu2lxcLEzMo7Kw",
+        "label": "food",
+        "image_url": "/business-image/FcupiNHBqu2lxcLEzMo7Kw",
+        "visual_representativeness": 0.8191061615943909
+      },
+      {
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "photo_id": "CyK0CORlMI_6rJoSjfy38Q",
+        "label": "outside",
+        "image_url": "/business-image/CyK0CORlMI_6rJoSjfy38Q",
+        "visual_representativeness": 0.7480956315994263
+      }
+    ]
+  },
+  "rubyCase": {
+    "source": "frozen-model",
+    "summary": {
+      "case_type": "E — Sparse-User Visual Gain",
+      "user_row": 3072,
+      "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+      "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+      "business_name": "Ruby Slipper - New Orleans",
+      "nv_rank": 52,
+      "mm_rank": 13,
+      "rank_improvement": 39,
+      "training_history_count": 5,
+      "target_category_count": 5,
+      "target_categories_supported_by_history": 3,
+      "target_category_support_fraction": 0.6,
+      "target_has_visual": true,
+      "selected_image_count": 5,
+      "label_diversity": 5,
+      "target_visual_score_gain": 0.8575122952461243,
+      "target_visual_rank_gain": 713.0,
+      "competitive_visual_rank_effect": null
+    },
+    "category_overlap": [
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "category": "Restaurants",
+        "historical_business_count": 4
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "category": "Breakfast & Brunch",
+        "historical_business_count": 2
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "category": "American (Traditional)",
+        "historical_business_count": 1
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "category": "American (New)",
+        "historical_business_count": 0
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "category": "Cafes",
+        "historical_business_count": 0
+      }
+    ],
+    "history": [
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "target_business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_id": "8ASzjS3ITg5bQSyObsCx5w",
+        "name": "Russell's Marina Grill",
+        "shared_category_count": 3,
+        "shared_categories": "American (Traditional), Breakfast & Brunch, Restaurants"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "target_business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_id": "yMlpyzvx5o3tTFI_1esgGQ",
+        "name": "Bakery Bar",
+        "shared_category_count": 2,
+        "shared_categories": "Breakfast & Brunch, Restaurants"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "target_business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_id": "yzMxuQYGIqHZCds5J21g2A",
+        "name": "City Donuts & Café",
+        "shared_category_count": 1,
+        "shared_categories": "Restaurants"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "user_id": "CJ8yYeLi1qaBbxc5xezyaA",
+        "target_business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_id": "LMZUCETroHpXHQzOwSqGEA",
+        "name": "Secret Birria",
+        "shared_category_count": 1,
+        "shared_categories": "Restaurants"
+      }
+    ],
+    "text": [
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "review_id": "upLkUjDxeLDliqnr4SLofA",
+        "date": "2020-01-03 15:00:58",
+        "stars": 4,
+        "useful": 1,
+        "text_representativeness": 0.9404814,
+        "text_excerpt": "This was our first time in NOLA and per some recommendations from back home, we decided to get brunch at Ruby Slipper. It was a great first meal! *** Tip: Put yourself on Yelp wait list as it gets pretty packed *** I got the Grilled fish St. Peter and my girlfriend got the Peacemaker (chose 2 different egg benedicts). My meal was delicious and definitely one of my favorites during our trip. The fish was cooked perfectly and seasoned just right. The egg benedicts were pretty good as well. Service"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "review_id": "nuJDIBxDOxJrGxWkCFOLQw",
+        "date": "2019-04-30 18:56:21",
+        "stars": 4,
+        "useful": 2,
+        "text_representativeness": 0.9381895,
+        "text_excerpt": "Came here for breakfast on Monday morning. We reserved a table through yelp before we got there so we didn't have to wait long. We were seated outside on a picnic table. It was really nice out so it was nice to sit outside. The table was super sticky though which was a little uncomfortable at times. We got the banana's foster french toast to share for the table (we had 3 people total). It was really yummy! The portion was huge, but it was so good! I loved the bananas and all the toppings. I got "
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "review_id": "QX63ISf3xtgm4iQZiVg5aw",
+        "date": "2017-11-15 00:00:00",
+        "stars": 4,
+        "useful": 0,
+        "text_representativeness": 0.937711,
+        "text_excerpt": "Came here early to beat the rush at about 8 am and we were promptly seated at the bar. Ordered the mimosas which were large and strong. My friend and I shared two entrees. Definently would recommend the Cochon! I am not a big eggs Benedict fan but this was amazing. It comes on a flaky biscuit instead of English muffin and had pulled pork on top and the perfect amount of hollandaise sauce. We also ordered bananas foster French toast which comes in a ginormous serving. This will be sure to satisfy"
+      }
+    ],
+    "visual": [
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "photo_id": "TyWecQT1sESpgMdp6I6lWg",
+        "photo_filename": "TyWecQT1sESpgMdp6I6lWg.jpg",
+        "label": "inside",
+        "caption_clean": null,
+        "selection_rank": 1,
+        "visual_representativeness": 0.85415936,
+        "image_url": "/business-image/TyWecQT1sESpgMdp6I6lWg"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "photo_id": "2lGRsaa3gfNiK6EbzH4yKA",
+        "photo_filename": "2lGRsaa3gfNiK6EbzH4yKA.jpg",
+        "label": "menu",
+        "caption_clean": null,
+        "selection_rank": 5,
+        "visual_representativeness": 0.83905554,
+        "image_url": "/business-image/2lGRsaa3gfNiK6EbzH4yKA"
+      },
+      {
+        "case_type": "E — Sparse-User Visual Gain",
+        "business_id": "oBNrLz4EDhiscSlbOl8uAw",
+        "business_name": "Ruby Slipper - New Orleans",
+        "photo_id": "I_VO3sNVgA01zhVW5a5bMA",
+        "photo_filename": "I_VO3sNVgA01zhVW5a5bMA.jpg",
+        "label": "drink",
+        "caption_clean": "Creamy Vanilla Iced Coffee",
+        "selection_rank": 4,
+        "visual_representativeness": 0.8274646,
+        "image_url": "/business-image/I_VO3sNVgA01zhVW5a5bMA"
+      }
+    ]
+  },
+  "emerilSearch": {
+    "source": "frozen-model",
+    "query": "emeril",
+    "user_row": 3279,
+    "user_id": "D76EFdD5F7XoIIyQmWTQhA",
+    "candidate_businesses": 2516,
+    "total": 2,
+    "comparison": [
+      {
+        "business_row": 2279,
+        "business_id": "u7uFQCoHFtBKCtbWUm6yZw",
+        "nv_rank": 33,
+        "mm_rank": 38,
+        "nv_score": 0.7850242853164673,
+        "mm_score": 0.7802861332893372,
+        "rank_movement": -5,
+        "has_visual_feature": true,
+        "name": "Emeril's ",
+        "address": "800 Tchoupitoulas St",
+        "city": "New Orleans",
+        "state": "LA",
+        "postal_code": "70130",
+        "stars": 4.0,
+        "review_count": 1608,
+        "categories": [
+          "Seafood",
+          "Cajun/Creole",
+          "Restaurants",
+          "American (New)"
+        ],
+        "is_open": true,
+        "image_url": "/business-image/POPAoL12iPU74un4BxriRQ"
+      },
+      {
+        "business_row": 877,
+        "business_id": "M2h3vq8WeSiQAmyJtrPvbQ",
+        "nv_rank": 66,
+        "mm_rank": 98,
+        "nv_score": 0.7651401162147522,
+        "mm_score": 0.7346701622009277,
+        "rank_movement": -32,
+        "has_visual_feature": true,
+        "name": "Emeril's Delmonico",
+        "address": "1300 Saint Charles Ave",
+        "city": "New Orleans",
+        "state": "LA",
+        "postal_code": "70130",
+        "stars": 4.0,
+        "review_count": 751,
+        "categories": [
+          "Restaurants",
+          "American (New)",
+          "Cajun/Creole",
+          "Bars",
+          "Steakhouses",
+          "American (Traditional)",
+          "Nightlife"
+        ],
+        "is_open": true,
+        "image_url": "/business-image/tBiVyxEQZJqwJG5QhEjPVQ"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 # Local datasets, model artefacts and archives
-**/processed_data*/
+**/processed_data copy/
 **/YelpDataset/
 **/Image_files/
 Yelp JSON/
@@ -17,3 +17,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Include the requested processed-data archive.
+!/processed_data/**/*.zip

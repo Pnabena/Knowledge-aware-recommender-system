@@ -1,0 +1,5 @@
+interaction_support_group,test_cases,businesses,median_train_interactions,median_nv_rank,median_mm_rank,mean_rank_improvement,mean_delta_ndcg10,mean_delta_recall20,mean_delta_ndcg20
+Q1: Low,827,381,11.0,1812.0,1364.0,416.92019347037484,0.0,0.0,0.0
+Q2: Medium-low,1258,351,29.0,1063.0,947.5,176.03656597774244,0.0,0.0,0.0
+Q3: Medium-high,2418,360,62.0,527.0,493.0,35.90736145574855,0.0,0.0,0.0
+Q4: High,8763,360,242.0,100.0,91.0,2.667123131347712,0.0014681325888726677,0.017345657879721556,0.004521146254995397

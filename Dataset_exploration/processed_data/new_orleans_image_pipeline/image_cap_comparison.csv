@@ -1,0 +1,4 @@
+image_cap,selected_images,images_retained_percentage,businesses_represented,businesses_affected_by_cap,mean_selected_images,median_selected_images,maximum_selected_images,mean_selected_labels,businesses_preserving_all_labels,all_label_preservation_percentage,captioned_selected_images,captioned_selected_percentage
+3,4760,24.47,1977,1042,2.41,3.0,3,1.92,1729,87.46,2627,55.19
+5,6681,34.35,1977,763,3.38,4.0,5,2.07,1977,100.0,3656,54.72
+10,9748,50.11,1977,451,4.93,4.0,10,2.07,1977,100.0,5292,54.29

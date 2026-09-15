@@ -1,0 +1,5 @@
+photo_id,business_id,caption,label,caption_clean,has_caption,file_found,file_extension,file_size_bytes,image_readable,image_width,image_height,image_format,image_mode,validation_error,caption_present,in_personalisation_core,photo_filename,image_eligible
+K6pfRNwGodm1m1gFVQlj-Q,FxosV3rl41ZlR724nnrImA,,food,,False,True,.jpg,243,False,,,,,Unidentified image format,False,True,K6pfRNwGodm1m1gFVQlj-Q.jpg,False
+QhATx1B1n8uf8C6siMNTfA,FxosV3rl41ZlR724nnrImA,,food,,False,True,.jpg,243,False,,,,,Unidentified image format,False,True,QhATx1B1n8uf8C6siMNTfA.jpg,False
+iX-8Xm2G7meRHUg8qhoL1A,FxosV3rl41ZlR724nnrImA,,food,,False,True,.jpg,243,False,,,,,Unidentified image format,False,True,iX-8Xm2G7meRHUg8qhoL1A.jpg,False
+l_rMdwgrvjm2PyHyXBcBTw,FxosV3rl41ZlR724nnrImA,,food,,False,True,.jpg,243,False,,,,,Unidentified image format,False,True,l_rMdwgrvjm2PyHyXBcBTw.jpg,False

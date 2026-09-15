@@ -1,0 +1,5 @@
+user_history_group,users,min_train_interactions,median_train_interactions,max_train_interactions,visual_supported_targets,visual_supported_percent
+Sparse: 3–5,8926,3,4.0,5,7890,88.39345731570693
+Medium-low: 6–8,2844,6,7.0,8,2516,88.46694796061885
+Medium-high: 9–15,1884,9,11.0,15,1671,88.69426751592357
+Dense: 16+,1337,16,26.0,661,1189,88.93044128646223
