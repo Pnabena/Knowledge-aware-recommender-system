@@ -1,0 +1,19 @@
+# Local datasets, model artefacts and archives
+**/processed_data*/
+**/YelpDataset/
+**/Image_files/
+Yelp JSON/
+Yelp Photos/
+*.zip
+
+# Local environments and generated caches
+.venv/
+venv/
+node_modules/
+.next/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+!.env.example
