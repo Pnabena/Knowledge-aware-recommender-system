@@ -119,18 +119,105 @@ Knowledge Graph         Text Representations
                    v
   Explanation & Model Analysis
 
-## Notebooks
 
-The notebooks are organised in pipeline order:
 
-| Notebook | Purpose |
-| --- | --- |
-| [00 — Dataset extraction](Dataset_exploration/00_yelp_dataset_extration.ipynb) | Extract the local Yelp data. |
-| [01 — Dataset exploration](Dataset_exploration/01_yelp_dataset_exploration.ipynb) | Explore businesses and interactions and prepare the experimental subset. |
-| [02 — Image embeddings](Dataset_exploration/02_yelp_image_embeddings.ipynb) | Select business photos and generate image representations. |
-| [03 — Text embeddings](Dataset_exploration/03_yelp_text_embeddings.ipynb) | Prepare training-review text representations. |
-| [04 — Metadata knowledge graph](Dataset_exploration/04_yelp_metadata_knowledge_graph.ipynb) | Prepare structured business information and graph relations. |
-| [05 — Recommendation model](Dataset_exploration/05_yelp_kgrec_model.ipynb) | Train and evaluate the recommendation models. |
-| [06 — Visualisation](Dataset_exploration/06_yelp_visualization.ipynb) | Plot experimental results, including the corrected G7.8 confidence-interval labels. |
-| [07 — Explanation layer](Dataset_exploration/07_yelp_explanation_layer.ipynb) | Analyse frozen model behaviour and selected explanation cases. |
+Explainability & Model Analysis
+
+The project deliberately separates evidence from causal explanation.
+
+Recommendation analysis includes:
+
+Knowledge-graph evidence
+Representative training-review evidence
+Representative visual evidence
+User-history/category overlap
+Learned modality allocation
+Visual perturbation analysis
+Controlled multimodal versus non-visual ranking comparison
+
+Visual perturbation was used to examine how the frozen model responds when visual information is removed at inference time.
+
+Evidence is presented as information associated with the recommendation rather than as proof that any single feature caused the ranking.
+
+Research Demonstrator
+
+A web demonstrator was developed to expose the frozen recommendation system through an interactive interface.
+
+Frontend: Next.js / React / TypeScript
+Backend: FastAPI
+Model state: Frozen evaluated outputs — no model retraining
+
+The application includes:
+
+Personalised visual recommendation feed
+Full catalogue search
+KGRec-MM vs KGRec-NV ranking comparison
+Business profiles
+Knowledge-graph evidence
+Text evidence
+Visual evidence
+Model-behaviour analysis
+Selected research-case views
+
+A static public portfolio version is currently being prepared so the evaluated system can be explored without requiring the complete local research environment.
+
+
+
+Frozen research outputs
+        |
+        v
+     FastAPI
+        |
+        v
+   Next.js / React
+        |
+        +---- Personalised feed
+        +---- Search
+        +---- Ranking comparison
+        +---- Business profiles
+        +---- Explanation evidence
+
+
+        Technology
+
+Machine Learning
+
+Python
+PyTorch
+BGE-small-en-v1.5
+CLIP ViT-B/32
+Knowledge-aware recommendation
+
+Data
+
+Pandas
+NumPy
+PyArrow
+
+Application
+
+FastAPI
+Next.js
+React
+TypeScript
+
+Evaluation
+
+Recall@K
+NDCG@K
+MAP@K
+Bootstrap analysis
+Ablation and perturbation analysis
+
+
+Research Conclusion
+
+Visual information provided a useful complementary signal for personalised local-business recommendation, but its value was conditional rather than universal.
+
+The strongest multimodal gains appeared at broader recommendation cut-offs, while detailed analysis showed that visual contribution depends on the surrounding behavioural and content evidence.
+
+This highlights an important design principle for multimodal recommender systems:
+
+More modalities do not automatically produce better recommendations. Their value depends on when and how they contribute useful evidence.
+
 
