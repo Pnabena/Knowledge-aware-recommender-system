@@ -54,7 +54,7 @@ The demonstrator supports:
 
 The static portfolio version is included in `Demo_app`: it bundles the frozen data and selected photos, so browsing and search require no live Python backend or complete local research environment.
 
-**Public demo:** Coming soon
+**Public demo:** https://kgrecdemonstrator.vercel.app/
 
 ---
 
