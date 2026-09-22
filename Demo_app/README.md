@@ -28,6 +28,10 @@ For a frontend hosting project, use:
 | Output directory | `out` |
 | Backend/environment variables | None |
 
+The committed `vercel.json` pins the install/build commands and exported `out` directory, using Vercel's static hosting preset (`framework: null`). A repository-root configuration also supports Vercel projects whose Root Directory is left at the repository root. Both configurations publish the same demo; no `npm start` process runs in production.
+
+If the public domain still shows an older version, open the latest deployment for the correct Vercel project, confirm its source commit, and promote that deployment to production. A successful GitHub deployment status alone does not verify which version a public domain is serving. The deployed `/data/manifest.json` should return JSON with 2,516 businesses and five notebook cases.
+
 The existing repository-root Dockerfile and Railway configuration belong to the optional live research API. They are not required for the static demo. The former setup is preserved in [the live-backend reference](docs/live-backend-reference.md).
 
 ## Bundled snapshot
