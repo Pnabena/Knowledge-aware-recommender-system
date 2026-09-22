@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Path, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from backend.catalogue import business_detail, business_ranking, enriched_comparison, feed_for_user, photo_path, search_businesses
+from backend.cors import cors_origin_regex, cors_origins
 from backend.evidence import case_evidence, notebook_cases, notebook_case_evidence, review_excerpts
 
 from backend.recommender import (
@@ -15,16 +16,16 @@ app = FastAPI(
 )
 
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000"
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
-)
+_cors = {
+    "allow_origins": cors_origins(),
+    "allow_credentials": True,
+    "allow_methods": ["*"],
+    "allow_headers": ["*"],
+}
+_origin_regex = cors_origin_regex()
+if _origin_regex:
+    _cors["allow_origin_regex"] = _origin_regex
+app.add_middleware(CORSMiddleware, **_cors)
 
 
 @app.get("/health")

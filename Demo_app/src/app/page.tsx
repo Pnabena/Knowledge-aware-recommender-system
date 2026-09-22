@@ -1,9 +1,5 @@
-import { DiscoveryShell } from "@/components/discovery-shell";
-import { getDiscoveryFeed } from "@/lib/feed";
+import { StaticHome } from "@/components/static-pages";
 
-export const dynamic = "force-dynamic";
-
-export default async function Home() {
-  const feed = await getDiscoveryFeed();
-  return <DiscoveryShell feed={feed} />;
+export default function Home() {
+  return <StaticHome />;
 }

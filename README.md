@@ -52,7 +52,7 @@ The demonstrator supports:
 - model-behaviour and perturbation analysis
 - selected notebook/research cases
 
-A public static portfolio version is being prepared so the system can be explored without requiring the complete local research environment.
+The static portfolio version is included in `Demo_app`: it bundles the frozen data and selected photos, so browsing and search require no live Python backend or complete local research environment.
 
 **Public demo:** Coming soon
 
@@ -409,47 +409,34 @@ Knowledge-aware-recommender-system/
 
 ---
 
-## Running the Research Demonstrator Locally
+## Running the Static Demonstrator Locally
 
-The full local demonstrator depends on the prepared research artefacts and authorised Yelp data.
-
-### Backend
+The demo serves bundled HTML, JavaScript, JSON and 6,122 selected photos. No Python backend, model weights or processed-data download is needed to build or serve it.
 
 ```bash
 cd Demo_app
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r backend/requirements.txt
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+npm ci
+npm run build
+npm start
 ```
 
-### Frontend
+Open <http://127.0.0.1:3000>. To deploy, publish the contents of `Demo_app/out/` to a static host at the site root. Hosting settings: root directory `Demo_app`, build command `npm run build`, output directory `out`; no backend environment variables are required.
 
-In a second terminal:
+The snapshot supports all 2,516 searchable businesses, presentation user 3279 and five exact notebook cases. Ruby Slipper's notebook case for user 3072 retains ranks **52 → 13**, **60%** category coverage and **+713** target-visual rank sensitivity.
 
-```bash
-cd Demo_app
-npm install
-npm run dev
-```
-
-Then open:
-
-```text
-http://127.0.0.1:3000
-```
+See [the demo README](Demo_app/README.md) for snapshot regeneration and deployment details. Python, processed research artefacts and the original photo library are needed only to regenerate the snapshot. The optional live API and repository-root Docker/Railway configuration are documented in [the live-backend reference](Demo_app/docs/live-backend-reference.md).
 
 ### Validation
-
-The demonstrator repository includes frontend and backend checks.
 
 ```bash
 npm run lint
 npm run typecheck
 npm test
 npm run build
-python -m unittest backend.test_dataset -v
+npm run test:browser
 ```
+
+Browser checks use installed Google Chrome and a static file server. Research-backend tests remain available separately with the prepared Python environment and source artefacts.
 
 ---
 
@@ -554,7 +541,8 @@ The study finds that visual information can provide a useful complementary signa
 - [x] Visual ablation and perturbation analysis
 - [x] Evidence-grounded explanation layer
 - [x] Next.js + FastAPI research demonstrator
-- [ ] Static public portfolio demonstrator
+- [x] Static portfolio demonstrator implementation
+- [ ] Public static hosting deployment
 
 ---
 

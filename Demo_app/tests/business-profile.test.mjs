@@ -7,9 +7,15 @@ import { pathToFileURL } from "node:url";
 import { createRequire } from "node:module";
 import ts from "typescript";
 
-// Golden responses captured from the actual local bundle, manifest and K4/K5 artefacts.
-const fixture = JSON.parse(await readFile(new URL("./fixtures/frozen-dataset.json", import.meta.url), "utf8"));
-const cases = JSON.parse(await readFile(new URL("./fixtures/case-context.json", import.meta.url), "utf8"));
+// Golden responses captured from the local bundle; static export only changes photo URLs.
+function staticUrls(value) {
+  if (typeof value === "string" && value.startsWith("/business-image/")) return value.replace("/business-image/", "/photos/") + ".jpg";
+  if (Array.isArray(value)) return value.map(staticUrls);
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, staticUrls(item)]));
+  return value;
+}
+const fixture = staticUrls(JSON.parse(await readFile(new URL("./fixtures/frozen-dataset.json", import.meta.url), "utf8")));
+const cases = staticUrls(JSON.parse(await readFile(new URL("./fixtures/case-context.json", import.meta.url), "utf8")));
 const require = createRequire(import.meta.url);
 const temporary = await mkdtemp(join(tmpdir(), "local-table-dataset-test-"));
 for (const file of ["lib/api", "lib/business-adapter", "lib/business-profile", "lib/profile-navigation", "lib/feed", "lib/rankings"]) {
@@ -22,31 +28,25 @@ for (const file of ["lib/api", "lib/business-adapter", "lib/business-profile", "
 }
 const moduleAt = (name) => import(pathToFileURL(join(temporary, `lib/${name}.mjs`)));
 const { getBusinessProfile, getRecommendationContext, getBusinessExplanation, getNotebookContext } = await moduleAt("business-profile");
+const { fetchDataset } = await moduleAt("api");
 const { getDiscoveryFeed } = await moduleAt("feed");
 const { getRankingComparison } = await moduleAt("rankings");
 const { businessToCard, profileToCard } = await moduleAt("business-adapter");
 const { profileHref } = await moduleAt("profile-navigation");
 const originalFetch = globalThis.fetch;
 let serviceDown = false;
+const requestedFiles = [];
 globalThis.fetch = async (url) => {
+  assert.ok(url.startsWith("/data/"), `Unexpected network dependency: ${url}`);
+  requestedFiles.push(url);
   if (serviceDown) throw new Error("offline");
-  const request = new URL(url);
-  const path = request.pathname;
-  const business = [fixture.business, fixture.missing, cases.ruby].find((item) => path === `/businesses/${item.business_id}`);
-  let payload = business;
-  if (path.startsWith("/feed/")) payload = fixture.feed;
-  else if (path === "/notebook-cases") payload = cases.cases;
-  else if (path === "/search") payload = request.searchParams.get("q") === "emeril" ? cases.emerilSearch : { source: "frozen-model", user_row: 3279, comparison: [] };
-  else if (path === `/businesses/${cases.ruby.business_id}/notebook-case`) payload = cases.rubyCase;
-  else if (path === `/businesses/${cases.ruby.business_id}/ranking`) payload = cases.rubyRanking;
-  else if (path.endsWith("/ranking")) {
-    const row = fixture.rankings.comparison.find((item) => path === `/businesses/${item.business_id}/ranking`);
-    payload = row ? { ...row, user_id: fixture.rankings.user_id, user_row: fixture.rankings.user_row } : null;
+  try {
+    const payload = await readFile(new URL(`../public${url}`, import.meta.url), "utf8");
+    return new Response(payload, { status: 200, headers: { "Content-Type": "application/json" } });
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+    return new Response("Not found", { status: 404 });
   }
-  else if (path === `/businesses/${fixture.business.business_id}/explanation`) payload = fixture.evidence;
-  else if (path === `/businesses/${cases.ruby.business_id}/explanation`) payload = cases.rubyDemo;
-  else if (path.endsWith("/explanation")) payload = null;
-  return new Response(JSON.stringify(payload ?? null), { status: payload === undefined ? 404 : 200, headers: { "Content-Type": "application/json" } });
 };
 after(async () => { globalThis.fetch = originalFetch; await rm(temporary, { recursive: true, force: true }); });
 
@@ -54,15 +54,18 @@ test("feed retains exact frozen MM order, Yelp stars and genuine photo ownership
   const feed = await getDiscoveryFeed();
   assert.equal(feed.source, "frozen-model");
   assert.equal(feed.userRow, 3279);
-  assert.deepEqual(feed.businesses.map((item) => item.id), fixture.feed.businesses.map((item) => item.business_id));
-  for (const [index, business] of feed.businesses.entries()) {
+  assert.equal(feed.businesses.length, 30);
+  assert.deepEqual(feed.businesses.map((item) => item.mmRank), Array.from({ length: 30 }, (_, i) => i + 1));
+  assert.deepEqual(feed.businesses.slice(0, fixture.feed.businesses.length).map((item) => item.id), fixture.feed.businesses.map((item) => item.business_id));
+  for (const [index, business] of feed.businesses.slice(0, fixture.feed.businesses.length).entries()) {
     const source = fixture.feed.businesses[index];
     assert.equal(business.rating, source.stars);
     assert.equal(business.mmRank, source.mm_rank);
     assert.deepEqual(business.photos.map((photo) => photo.id), source.photos.map((photo) => photo.photo_id));
     assert.ok(source.photos.every((photo) => photo.business_id === business.id));
   }
-  assert.ok(feed.categories.slice(1).every((category) => fixture.feed.businesses.some((business) => business.categories.includes(category.label))));
+  const exportedFeed = JSON.parse(await readFile(new URL("../public/data/feed.json", import.meta.url), "utf8"));
+  assert.ok(feed.categories.slice(1).every((category) => exportedFeed.businesses.some((business) => business.categories.includes(category.label))));
 });
 
 test("profile and saved-card adapter keep the same business, rating, categories and photos", async () => {
@@ -138,10 +141,24 @@ test("Ruby notebook case and demo context never mix users, ranks or evidence", a
   assert.equal(new URL(selected.returnTo, "http://localhost").searchParams.get("q"), "Ruby");
 });
 
-test("API failure is explicit and never falls back to fictional fixtures", async () => {
+test("missing static data fails honestly and can be retried without a live backend", async () => {
+  const path = "/businesses/u7uFQCoHFtBKCtbWUm6yZw/ranking";
   serviceDown = true;
-  try { await assert.rejects(getDiscoveryFeed, /offline/); }
+  try { await assert.rejects(() => fetchDataset(path), /offline/); }
   finally { serviceDown = false; }
+  const ranking = await fetchDataset(path);
+  assert.equal(ranking.business_id, "u7uFQCoHFtBKCtbWUm6yZw");
+  assert.ok(requestedFiles.every((path) => path.startsWith("/data/")));
+  await assert.rejects(() => fetchDataset("/feed/0"), { status: 404 });
+  await assert.rejects(() => fetchDataset("/search?q=emeril&user_row=3072"), { status: 404 });
+});
+
+test("static search handles punctuation and case without changing ranks", async () => {
+  const expected = (await getRankingComparison("emeril")).results;
+  for (const query of ["EMERIL", "Emeril’s", "Emeril's"]) {
+    assert.deepEqual((await getRankingComparison(query)).results, expected);
+  }
+  assert.deepEqual((await getRankingComparison("!!!")).results, []);
 });
 
 test("profile navigation safely preserves recommendation source and query", () => {

@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "node node_modules/next/dist/bin/next dev",
     "build": "node node_modules/next/dist/bin/next build",
-    "start": "node node_modules/next/dist/bin/next start",
+    "start": "node scripts/serve-static.mjs",
     "lint": "node node_modules/eslint/bin/eslint.js .",
     "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "export:data": "python3 -m backend.export_static",
+    "test:browser": "node node_modules/@playwright/test/cli.js test"
   },
   "dependencies": {
     "@xyflow/react": "^12.11.6",
@@ -18,6 +20,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
